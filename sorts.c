@@ -60,6 +60,23 @@ int cmp(student* a, student* b) {
     return fnCmp;
 }
 
+void swap(int* ptrA, int* ptrB) {
+    int temp = *ptrA;
+    *ptrA = *ptrB;
+    *ptrB = temp;
+}
+
+int partition(int array[], int low, int high) {
+    int partElemeent = array[low];
+    for (int i = 0; i < high; i++) {
+        if (array[low] > array[high]) {
+            swap(array[partElemeent], array[high]);
+            break;
+        }
+    }
+    return partElemeent;
+}
+
 int main(void) {
     int array[] = { 5, 2, 7, 1, 0, 9, 13, 3, 4, 20 };
     printArr(array, 10);
