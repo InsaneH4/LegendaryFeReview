@@ -18,7 +18,7 @@ void print2D(int** arr, int size, int size2) {
 }
 
 //Fall 2018 Q1
-int* makeArray(int* lengths, int numArrays) {
+int** makeArray(int* lengths, int numArrays) {
     if (lengths == NULL) {
         return NULL;
     }
